@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Web Development Template</title>
+    
+    <!-- Nhúng Font chữ Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Piazzolla:opsz,wght@8..30,700&family=Ubuntu&display=swap" rel="stylesheet">
+
+    <!-- Mã định dạng Custom CSS -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .navbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            cursor: pointer;
+            padding: 10px 50px;
+            z-index: 1000;
+        }
+
+        .background {
+            background: #1a1a1a;
+            background-blend-mode: darken;
+            background-size: cover;
+        }
+
+        .nav-list {
+            width: 70%;
+            display: flex;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-right: 20px;
+        }
+
+        .logo img {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+
+        .nav-list li {
+            list-style: none;
+            padding: 15px 20px;
+        }
+
+        .nav-list li a {
+            text-decoration: none;
+            color: white;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-list li a:hover {
+            color: #4CAF50;
+        }
+
+        .rightNav {
+            width: 30%;
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 10px;
+        }
+
+        #search {
+            padding: 6px 12px;
+            font-size: 15px;
+            border: 2px solid #555;
+            border-radius: 8px;
+            outline: none;
+        }
+
+        .firstsection {
+            background-color: #2e7d32;
+            height: 400px;
+        }
+
+        .secondsection {
+            background-color: #1565c0;
+            height: 400px;
+        }
+
+        .box-main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            max-width: 80%;
+            margin: auto;
+            height: 100%;
+        }
+
+        .firstHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .secondHalf {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .text-big {
+            font-family: 'Piazzolla', serif;
+            font-weight: bold;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .text-small {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            margin: 7px 0;
+            border: 2px solid white;
+            border-radius: 8px;
+            background: none;
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background: white;
+            color: black;
+        }
+
+        .btn-sm {
+            padding: 6px 14px;
+            vertical-align: middle;
+        }
+
+        .section {
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        .section-Left {
+            flex-direction: row-reverse;
+        }
+
+        .paras {
+            padding: 0px 40px;
+            flex: 1;
+        }
+
+        .thumbnail img {
+            width: 280px;
+            height: 200px;
+            object-fit: cover;
+            border: 2px solid #333;
+            border-radius: 20px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        .text-footer {
+            text-align: center;
+            padding: 25px 0;
+            font-family: 'Ubuntu', sans-serif;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar background">
+        <ul class="nav-list">
+            <div class="logo">
+                <img src="https://picsum.photos/100/100?random=1" alt="Logo">
+            </div>
+            <li><a href="#web">Web Technology</a></li>
+            <li><a href="#program">C Programming</a></li>
+            <li><a href="#java">Java</a></li>
+        </ul>
+
+        <div class="rightNav">
+            <input type="text" name="search" id="search" placeholder="Search...">
+            <button class="btn btn-sm">Search</button>
+        </div>
+    </nav>
+
+    <!-- First Section - Web Technology -->
+    <section class="firstsection">
+        <div class="box-main">
+            <div class="firstHalf">
+                <h1 class="text-big" id="web">Web Technology</h1>
+                <p class="text-small">
+                    HTML stands for HyperText Markup Language. It is used to design web pages using a markup language. 
+                    HTML is the combination of Hypertext and Markup language. Hypertext defines the link between the web pages. 
+                    A markup language is used to define the text document within tag which defines the structure of web pages.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Second Section - C Programming -->
+    <section class="secondsection">
+        <div class="box-main">
+            <div class="secondHalf">
+                <h1 class="text-big" id="program">C Programming</h1>
+                <p class="text-small">
+                    C is a procedural programming language. It was initially developed by Dennis Ritchie as a system programming language to write operating system. 
+                    The main features of C language include low-level access to memory, simple set of keywords, and clean style.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Third Section - Java (với Flexbox Layout) -->
+    <section class="section" id="java">
+        <div class="paras">
+            <h1 class="sectionTag text-big">Java</h1>
+            <p class="sectionSubTag text-small">
+                Java has been one of the most popular programming language for many years. Java is Object Oriented. 
+                The Java codes are first compiled into byte code. Then the byte code is run on Java Virtual Machine (JVM) regardless of the underlying architecture.
+            </p>
+        </div>
+        <div class="thumbnail">
+            <img src="https://picsum.photos/400/300?random=2" alt="Laptop image">
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="background">
+        <p class="text-footer">
+            Copyright &copy; 2026 All rights reserved
+        </p>
+    </footer>
+
+</body>
+</html>
